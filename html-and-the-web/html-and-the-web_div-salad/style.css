@@ -1,0 +1,12 @@
+body >*{
+color:white
+};
+
+.text-image-container {
+    display: flex;  /* Enable flexbox layout */
+    align-items: center;  /* Align content vertically */
+  };
+  
+  .text-image-container img {
+    margin: 0 10px 0 0;  /* Optional: Add margin for spacing */
+  };
