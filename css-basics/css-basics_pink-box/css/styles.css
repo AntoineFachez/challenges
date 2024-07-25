@@ -5,21 +5,45 @@
 }
 
 body {
+  width: 100%;
+  height: 100%;
   font-family: system-ui;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* put a selector here to select div elements (see index.html) */
-SELECTOR HERE {
+div {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: cursive;
   padding: 8px;
 
   /* set the height and the width of the box to 150px */
-
+  width: 150px;
+  height: 150px;
   /* make the background color "hotpink" */
+  background-color: hotpink;
 
-  /* make the text color "white" */
+  /* make the  text color "white" */
+  color: white;
 
   /* can you give the box round edges with an radius of 8px? */
+  border-radius: 8px;
 
   /* ✨ feel free to experiment! */
+}
+li {
+  list-style-type: none;
+  transition: font-size 400ms ease-in-out;
+}
+
+div > li:hover {
+  text-align: center;
+  font-size: 2rem;
+  transition: font-size 400ms ease-in-out, text-align 800ms;
 }
