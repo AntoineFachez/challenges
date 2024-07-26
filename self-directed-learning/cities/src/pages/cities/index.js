@@ -13,10 +13,13 @@ export default function Cities() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        margin: 0,
         padding: '1rem',
         backgroundColor: '#33343380',
       }}
     >
+      {' '}
+      <Link href="/">Go to Home</Link>
       <Typography variant="h2" sx={{ color: 'white' }}>
         Cities
       </Typography>
@@ -32,7 +35,6 @@ export default function Cities() {
           backgroundColor: '#33343380',
         }}
       ></Box>
-
       {cities.map((city) => (
         <Box
           key={city.id}

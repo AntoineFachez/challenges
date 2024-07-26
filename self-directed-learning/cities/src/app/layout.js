@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 
 import Link from 'next/link';
+import { Box } from '@mui/system';
 const inter = Inter({ subsets: ['latin'] });
 console.log('inter', inter.className);
 export const metadata = {

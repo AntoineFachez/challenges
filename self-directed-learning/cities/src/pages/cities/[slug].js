@@ -1,8 +1,11 @@
 import { useRouter } from 'next/router';
-import { cities } from '../../../lib/data';
 import Link from 'next/link';
-import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
+import { Typography } from '@mui/material';
+
+import { cities } from '../../../lib/data';
+import CityImage from '../someOther/Unsplash';
+
 export default function City() {
   const router = useRouter();
 
@@ -23,6 +26,8 @@ export default function City() {
       </Link>
       <Typography variant="h2">{city.name}</Typography>
       <Typography variant="body1">{city.description}</Typography>
+
+      <CityImage cityName={city.name} />
     </Box>
   );
 }
