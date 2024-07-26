@@ -59,11 +59,18 @@ main {
   background-color: #5dade2;
 }
 
-.box--center {
+/* .box--center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: #3498db;
+} */
+.box--center--wrapper {
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #3498db;
 }
 
