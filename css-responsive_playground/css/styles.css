@@ -62,7 +62,7 @@ h1 {
 .box--one {
   background-color: lightblue;
 
-  width: 100px;
+  width: 50%;
   height: 100px;
 }
 
@@ -93,4 +93,36 @@ h1 {
 
 .box--five img {
   width: 100%;
+}
+@media (min-width: 599px) {
+  .box--two {
+    width: 200px;
+  }
+}
+@media (min-width: 1199px) {
+  .box--two {
+    width: 400px;
+  }
+}
+@media (orientation: landscape) {
+  .box--three {
+    /* Flat design styles for landscape mode */
+    background-color: #333;
+    border-radius: 0;
+    padding: 30px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: #303030; /* Dark mode background */
+  }
+}
+@media (prefers-color-scheme: light) {
+  .box--four {
+    background-color: #b56e6e; /* Dark mode background */
+  }
+}
+
+img {
+  max-width: 200px;
 }

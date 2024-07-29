@@ -46,14 +46,24 @@
 
         <section class="section">
           <h3>Bonus (The &lt;picture&gt;-Element)</h3>
-          <p>
+          <!-- <p>
             I want to automatically switch out images when the viewport width is
             above 599px and above 1199px. Take a look at the img folder -
             there's some material in there.
-          </p>
+          </p> -->
+
           <div class="box box--five">
-            <!-- Perhaps you may want to use the <picture> Element here? -->
-            <img src="./img/cat_small.jpg" alt="A cat" />
+            <picture>
+              <source
+                media="(min-width: 1199px)"
+                srcset="./img/cat_large.jpg"
+              />
+              <source
+                media="(min-width: 599px)"
+                srcset="./img/cat_medium.jpg"
+              />
+              <img src="./img/cat_small.jpg" alt="A small cat" />
+            </picture>
           </div>
         </section>
       </section>
