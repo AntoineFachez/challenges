@@ -19,7 +19,7 @@ the start of the introduction. */
 
   /* Unit Variables*/
 
-  --gap: 20px;
+  --gap: 1rem;
 
   --header-brand: 4rem;
   --header-brand-line-height: 7rem;
@@ -44,6 +44,8 @@ the start of the introduction. */
   /* Calculating the exact margin required to put the main content
     right under the header and nav*/
   --main-content-margin-top: calc(var(--header-height) + var(--nav-height));
+
+  --card--height: 250px;
 }
 
 /* ==[ INTRODUCTION ]== */
@@ -76,8 +78,12 @@ if you're unsure. */
 }
 
 body {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
   font-family: system-ui;
   background-color: var(--forest-green);
+  padding: 0 0 7rem 0;
 }
 
 /* Header & Navigation */
@@ -133,22 +139,45 @@ body {
 /* Note: understanding what main-content and card-section do is
 fairly essential to completing this challenge. */
 
+.featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .main-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   margin-top: var(--main-content-margin-top);
   padding: var(--gap) 0 var(--gap) 0;
   background: var(--navy-blue);
 }
 
 .intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: var(--dark-beige);
   font-size: var(--regular-text);
   line-height: var(--regular-text-line-height);
   width: 70%;
+  padding: 1rem;
+  max-width: 50ch;
+  /* height: var(--card--height); */
+  min-height: 8rem;
+  /* background-color: var(--forest-green); */
 }
 
+.intro-text p {
+  height: var(--card--height);
+  vertical-align: middle;
+}
 .card-section {
   width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: var(--gap);
   flex-direction: column;
@@ -161,7 +190,7 @@ fairly essential to completing this challenge. */
   justify-content: center;
   align-items: center;
   width: 70%;
-  height: 250px;
+  height: var(--card--height);
   font-size: 1.5rem;
   box-shadow: 0px 0px 10px 0px var(--inky-black);
 }
@@ -206,7 +235,11 @@ fairly essential to completing this challenge. */
 /* Footer */
 
 .main-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   gap: var(--gap);
   background: var(--inky-black);
   padding: var(--gap);
@@ -251,3 +284,45 @@ width, etc. */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
+
+.main-content > * {
+  width: 100%;
+  /* max-width: 500px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(120, 110, 91, 0.46); */
+}
+@media (max-width: 400px) {
+  body {
+    padding-top: 8rem;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1199px) {
+  .intro-text {
+  }
+  .card-section {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .product-card {
+    max-width: 500px;
+  }
+}
+@media (min-width: 1020px) {
+  .card-section {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .product-card {
+    padding: 1rem;
+  }
+  .--forest {
+    width: 100%;
+    padding: 1rem;
+  }
+}
