@@ -34,31 +34,65 @@ main {
  * @example
  * .box--top-left -> This element should be be placed in the top, left corner.
 */
-
+main {
+  position: relative;
+}
 .box--top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #aed6f1;
 }
 
 .box--top-center {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   background-color: #85c1e9;
 }
 
 .box--top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
   background-color: #5dade2;
 }
 
-.box--center {
+/* .box--center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3498db;
+} */
+.box--center--wrapper {
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #3498db;
 }
 
 .box--bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   background-color: #2874a6;
 }
 
 .box--bottom-center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+
   background-color: #21618c;
 }
 
 .box--bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   background-color: #1b4f72;
 }
