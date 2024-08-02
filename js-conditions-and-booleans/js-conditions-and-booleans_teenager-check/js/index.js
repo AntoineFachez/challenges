@@ -15,7 +15,7 @@ button.addEventListener("click", () => {
   // "You are a teen." or "You are not a teen." into the console.
 });
 const checkAge = (age) => {
-  if (age >= 13 && age <= 18) {
+  if (age >= 13 && age <= 19) {
     output.textContent = "You are a teen.";
   } else {
     output.textContent = "You are not a teen.";
