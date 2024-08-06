@@ -34,4 +34,3 @@ function calculateScrollPercentage() {
   progressBar.style.width = scrollPercentage + "%";
   console.log(scrollPercentage);
 }
-calculateScrollPercentage();
