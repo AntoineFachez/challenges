@@ -27,6 +27,7 @@
     "
   >
     <form
+      aria-labelledby="title"
       style="
         position: absolute;
         inset: 50% 50% 50% 50%;
@@ -72,7 +73,9 @@
           >
             Personal Information
           </h5>
-          <label for="firstName">First Name:</label>
+          <label aria-describedby="firstName-input" for="firstName"
+            >First Name:</label
+          >
           <input
             id="firstName"
             type="text"
@@ -84,7 +87,9 @@
               /* background-color: rgba(245, 222, 179, 0.525); */
             "
           />
-          <label for="lastName">Last Name:</label>
+          <label aria-describedby="lastName-input" for="lastName"
+            >Last Name:</label
+          >
           <input
             id="lastName"
             type="text"
@@ -96,7 +101,9 @@
               /* background-color: rgba(245, 222, 179, 0.525); */
             "
           />
-          <label for="bDay">Your Birthday</label>
+          <label aria-describedby="birthday-input" for="bDay"
+            >Your Birthday</label
+          >
           <input
             id="bDay"
             type="date"
@@ -140,7 +147,9 @@
           >
             Further Information
           </h5>
-          <label for="colorPicker">Favorite Color</label>
+          <label aria-describedby="color-picker" for="colorPicker"
+            >Favorite Color</label
+          >
           <input
             id="colorPicker"
             type="color"
@@ -152,7 +161,11 @@
             "
           />
           <p>What's your favorite pet?</p>
-          <select id="favPet" style="font-size: 2rem">
+          <select
+            aria-describedby="select-favorit-pet"
+            id="favPet"
+            style="font-size: 2rem"
+          >
             <option value="" disabled selected>
               --Please choose an option--
             </option>
