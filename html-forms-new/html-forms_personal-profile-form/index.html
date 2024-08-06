@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Personal Profile Form</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body
+    style="
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* background-image: url(../html-forms_personal-profile-form/images/final_result.png);
+      background-repeat: no-repeat; */
+      /* background-size: 70vh; */
+      /* padding: 10rem; */
+      font-size: 2rem;
+      margin: 0;
+    "
+  >
+    <form
+      style="
+        position: absolute;
+        inset: 50% 50% 50% 50%;
+        transform: translate(0%, -50%);
+        width: 600px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* padding: 1rem; */
+        border: solid 1px black;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.9);
+      "
+    >
+      <section
+        style="width: 100%; height: 100%; display: flex; flex-direction: column"
+      >
+        <p>
+          We want to get to know you! Please enter your personal information
+        </p>
+        <div
+          style="
+            position: relative;
+            width: 30rem;
+            display: flex;
+            flex-direction: column;
+            border: solid 1px black;
+            border-radius: 5px;
+            padding: 2rem;
+          "
+        >
+          <h5
+            style="
+              position: absolute;
+              top: -4rem;
+              border: solid 1px black;
+              border-radius: 5px;
+              background-color: white;
+              padding: 0.5rem;
+            "
+          >
+            Personal Information
+          </h5>
+          <label for="firstName">First Name:</label>
+          <input
+            id="firstName"
+            type="text"
+            style="
+              width: 20ch;
+              height: 2rem;
+              font-size: 1.4rem;
+
+              /* background-color: rgba(245, 222, 179, 0.525); */
+            "
+          />
+          <label for="lastName">Last Name:</label>
+          <input
+            id="lastName"
+            type="text"
+            style="
+              width: 20ch;
+              height: 2rem;
+              font-size: 1.4rem;
+
+              /* background-color: rgba(245, 222, 179, 0.525); */
+            "
+          />
+          <label for="bDay">Your Birthday</label>
+          <input
+            id="bDay"
+            type="date"
+            style="
+              width: 20ch;
+              height: 2rem;
+              font-size: 1.4rem;
+
+              /* background-color: rgba(245, 222, 179, 0.525); */
+            "
+          />
+        </div>
+      </section>
+      <section
+        style="width: 100%; height: 100%; display: flex; flex-direction: column"
+      >
+        <p>
+          Can you tell us a little bit more? We want to annoy you with unwanted
+          ads
+        </p>
+        <div
+          style="
+            position: relative;
+            width: 30rem;
+            display: flex;
+            flex-direction: column;
+            border: solid 1px black;
+            border-radius: 5px;
+            padding: 2rem;
+          "
+        >
+          <h5
+            style="
+              position: absolute;
+              top: -4rem;
+              border: solid 1px black;
+              border-radius: 5px;
+              background-color: white;
+              padding: 0.5rem;
+            "
+          >
+            Further Information
+          </h5>
+          <label for="colorPicker">Favorite Color</label>
+          <input
+            id="colorPicker"
+            type="color"
+            style="
+              width: 4rem;
+              height: 2rem;
+
+              background-color: rgba(245, 222, 179, 0.525);
+            "
+          />
+          <p>What's your favorite pet?</p>
+          <select id="favPet" style="font-size: 2rem">
+            <option value="" disabled selected>
+              --Please choose an option--
+            </option>
+            <option value="Cat">Cat</option>
+            <option value="Dog">Dog</option>
+            <option value="Bird">Bird</option>
+            <option value="Fish">Fish</option>
+            <option value="Rabbit">Rabbit</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </section>
+      <button
+        type="submit"
+        id=""
+        style="width: 100%; height: fit-content; font-size: 2rem"
+      >
+        Submit
+      </button>
+    </form>
+  </body>
+</html>
