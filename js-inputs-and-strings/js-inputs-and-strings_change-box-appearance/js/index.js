@@ -33,8 +33,7 @@ inputColor.addEventListener("input", () => {
 inputRadius.addEventListener("input", () => {
   const radiusValue = inputRadius.value;
 
-  box.style.width = `${radiusValue}px`;
-  box.style.height = `${radiusValue}px`;
+  box.style.borderRadius = `${radiusValue}px`;
 });
 inputRotation.addEventListener("input", () => {
   const rotationValue = inputRotation.value;
