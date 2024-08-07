@@ -1,21 +1,20 @@
 console.clear();
 
 const form = document.querySelector('[data-js="form"]');
-console.log("form", form);
+const badnessInput = document.getElementById("badness");
+const age = document.getElementById("age");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const formElements = event.target.elements;
-
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData);
-
-  console.log("data", data);
-  console.log(
-    `The age-badness-sum of ${data.firstName} is ${
-      Number.parseInt(data.age) + Number.parseInt(data.badness)
-    }.`
-  );
-  event.target.reset();
-  event.target.elements.firstName.focus();
+const getDataFromForm = (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+  for (const [name, value] of data.entries()) {
+    console.log(name, value);
+  }
+  form.reset();
+  form.elements.firstName.focus();
+};
+form.addEventListener("submit", (e) => getDataFromForm(e));
+badnessInput.addEventListener("input", (e) => {
+  e.preventDefault();
+  console.log(+age.value + +badnessInput.value);
 });
