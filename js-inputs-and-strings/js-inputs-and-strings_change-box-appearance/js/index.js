@@ -37,9 +37,6 @@ inputRadius.addEventListener("input", () => {
 });
 inputRotation.addEventListener("input", () => {
   const rotationValue = inputRotation.value;
-  console.log(rotationValue);
 
   box.style.transform = `rotate(${rotationValue}deg)`;
 });
-
-console.log(box, inputColor, inputRadius, inputRotation);
