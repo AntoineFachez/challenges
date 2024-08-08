@@ -186,7 +186,7 @@ const createProductFooter = (tileData) => {
   button.classList.add("product__buy-button");
 
   price.textContent = tileData.fish.price;
-  button.textContent = "buy";
+  button.textContent = "Buy";
 
   footer.append(price, button);
 
