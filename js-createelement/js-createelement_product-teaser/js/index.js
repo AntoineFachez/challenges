@@ -153,7 +153,6 @@ const createProductBody = (tileData) => {
 };
 
 const createTextContainer = (tileData) => {
-  console.log("initTextContainer", tileData);
   const productTextContainer = document.createElement("div");
   const headerTitle = document.createElement("h2");
   headerTitle.textContent = tileData.fish.name;
@@ -174,7 +173,6 @@ const createProductDescription = (tileData) => {
   return description;
 };
 const createImageContainer = (tileData) => {
-  console.log("initImage", tileData.fish.imageSrc);
   const container = document.createElement("div");
   const image = document.createElement("img");
 
