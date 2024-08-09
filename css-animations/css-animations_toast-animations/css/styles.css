@@ -101,13 +101,28 @@ body {
     letter-spacing: 5px;
     transform: translate3d(15%, 0, 0);
   }
+  60% {
+    opacity: 0.2;
+
+    letter-spacing: -2px;
+    transform: translate3d(5%, 0, 0);
+  }
   75% {
     letter-spacing: 1px;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(10%, 0, 0);
+  }
+  90% {
+    letter-spacing: 3px;
+    transform: translate3d(-5%, 0, 0);
+  }
+  90% {
+    letter-spacing: 1px;
+    transform: translate3d(5%, 0, 0);
   }
   100% {
     opacity: 1;
     letter-spacing: 0px;
+    transform: translate3d(0, 0, 0);
   }
 }
 
