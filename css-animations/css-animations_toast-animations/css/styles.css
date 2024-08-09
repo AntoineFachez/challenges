@@ -61,11 +61,13 @@ body {
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
-  transition: transform 0.5s;
+  /* transition: transform 0.5s; */
+  animation: slideIn 0.5s ease-out forwards;
 }
 
 .toast--hidden {
-  transform: translate3d(-150%, 0, 0);
+  /* transform: translate3d(-150%, 0, 0); */
+  animation: slideOut 0.5s ease-in forwards;
 }
 
 /* Countdown */
@@ -86,4 +88,36 @@ body {
   opacity: 0.8;
   width: 0%;
   transition: width linear 2000ms;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    letter-spacing: 0px;
+    transform: translate3d(-150%, 0, 0);
+  }
+  50% {
+    opacity: 0.2;
+
+    letter-spacing: 5px;
+    transform: translate3d(15%, 0, 0);
+  }
+  75% {
+    letter-spacing: 1px;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 0px;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-150%, 0, 0);
+  }
 }
