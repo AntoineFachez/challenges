@@ -9,6 +9,5 @@ const root = document.getElementById("root");
 const square = Square();
 const circle = Circle();
 const pentagon = Pentagon();
-console.log(square, circle, pentagon);
 
 root.append(circle, square, pentagon);
