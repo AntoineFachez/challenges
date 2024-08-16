@@ -20,8 +20,7 @@ button5.addEventListener("click", async () => {
 
 const handleSleepFor10Button = async () => {
   icon.textContent = "💤";
-  await sleep(10);
-  icon.textContent = "⏰";
+  sleep(10).then(() => (icon.textContent = "⏰"));
 };
 
 button10.addEventListener("click", handleSleepFor10Button);
