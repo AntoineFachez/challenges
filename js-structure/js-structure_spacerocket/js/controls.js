@@ -4,7 +4,9 @@ import * as launchSequence from "./launchSequence.js";
 const launchSequenceFunction = launchSequence?.default;
 
 export function initialize() {
+
   console.log(launchSequence.default());
+
   const launchButton = document.querySelector('[data-js="launch"]');
   launchButton.addEventListener("click", () => {
     launch(launchSequenceFunction);
@@ -14,3 +16,4 @@ export function initialize() {
 window.addEventListener("load", () => {
   launchSequence.default();
 });
+
