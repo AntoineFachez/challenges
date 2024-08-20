@@ -8,19 +8,27 @@ const body = document.body;
 
 button3.addEventListener("click", async () => {
   icon.textContent = "💤";
-  sleep(3);
+  body.classList.add("dark");
+  await sleep(3);
   icon.textContent = "⏰";
+  body.classList.remove("dark");
 });
 
-button5.addEventListener("click", () => {
+button5.addEventListener("click", async () => {
   icon.textContent = "💤";
+  body.classList.add("dark");
+  await sleep(5);
   icon.textContent = "⏰";
+  body.classList.remove("dark");
 });
 
-function handleSleepFor10Button() {
+const handleSleepFor10Button = async () => {
   icon.textContent = "💤";
-  icon.textContent = "⏰";
-}
+  body.classList.add("dark");
+  sleep(10).then(() => {
+    (icon.textContent = "⏰"), body.classList.remove("dark");
+  });
+};
 
 button10.addEventListener("click", handleSleepFor10Button);
 
