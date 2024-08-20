@@ -1,3 +1,4 @@
+
 export function getAnimal(argument) {
   if (argument === undefined) {
     return "I do not like animals at all!";

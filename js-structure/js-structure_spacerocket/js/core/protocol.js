@@ -22,6 +22,9 @@ function logTry(cost) {
 }
 
 export function launch(launchFunction) {
+
+  console.log(launchFunction);
+
   window.rocket = getNewRocket();
   try {
     launchFunction();
