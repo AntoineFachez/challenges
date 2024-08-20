@@ -35,7 +35,8 @@ export function Wheel() {
   async function spin() {
     const targetIndex = Math.floor(Math.random() * symbols.length);
 
-    while (symbolIndex !== targetIndex || turns < Math.random() * 20 + 15) {
+    // while (symbolIndex !== targetIndex || turns < Math.random() * 20 + 15) {
+    while (symbolIndex !== targetIndex || turns < 1) {
       maybeChoke();
       await turnToNextSymbol();
       symbolElement.textContent = symbols[symbolIndex];
