@@ -1,3 +1,4 @@
+
 import { getNewRocket } from './core/rocket.js';
 import { loadPayload } from './core/load.js';
 import { fuel } from './core/fuel.js';
@@ -19,4 +20,5 @@ export default function launchSequence() {
   rocket.countdown = 5;
   liftoff();
   deployPayload();
+
 }
