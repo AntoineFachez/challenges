@@ -22,6 +22,7 @@ Your tests should cover the following criteria (write one test case for each of 
 
   - returns 10 if called with subtract(15, 5)
   - returns a negative value if the second argument is greater than the first one (use `toBeLessThan()` again)
+    npx jest
 
 - `multiply()`
 
