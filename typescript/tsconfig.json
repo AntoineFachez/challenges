@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "es2016", // Or a newer version if your target browsers support it
+    "module": "es2015", // Or "commonjs" if you prefer
+    "outDir": "./dist", // Where the compiled JavaScript will go
+    "strict": true, // Enable strict type checking (recommended)
+    "esModuleInterop": true // Helps with some module compatibility issues
+  }
+}

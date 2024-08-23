@@ -1,5 +1,6 @@
 import "./App.css";
+import HelloWorld from "./HelloWorld";
 
 export default function App() {
-  return <div>Say hello...</div>;
+  return HelloWorld();
 }
