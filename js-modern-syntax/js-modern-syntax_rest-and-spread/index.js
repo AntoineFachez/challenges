@@ -12,7 +12,9 @@ const person = {
   email: "jane@doe.com",
   phone: "12345",
 };
-
+export const { age } = person;
+export const { name } = person;
+export const { contact } = person;
 // example: export const {value 1} = myObject;
 
 // EXERCISE 2
