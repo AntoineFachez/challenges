@@ -1,6 +1,8 @@
-import { getRocket } from "./rocket.js";
+import { getRocket } from './rocket.js';
 
 export function loadPayload(satellite) {
+  // console.log(satellite.id);
+
   const rocket = getRocket();
   if (rocket.liftoff || rocket.countdown > 0) {
     throw new Error(
