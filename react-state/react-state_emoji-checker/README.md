@@ -14,7 +14,7 @@ You can use the following hints as a guideline:
 
 ## Notes
 
-- You only have to touch the `./src/App.jsx` file.
+<!-- - You only have to touch the `./src/App.jsx` file. -->
 
 ## Development
 
