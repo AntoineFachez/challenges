@@ -40,7 +40,6 @@ export default function App() {
           </span>
         </button>{' '}
       </div>
-
       <button
         type="button"
         onClick={() => {
