@@ -1,9 +1,9 @@
-import "./App.css";
+import { useState } from 'react';
+import './App.css';
 
 export default function App() {
-  let code = "?";
-
-  const validCode = "🐡🐠🐋";
+  const [code, setCode] = useState('');
+  const validCode = '🐡🐠🐋';
 
   return (
     <div className="container">
@@ -11,7 +11,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            setCode(code + '🐡');
           }}
         >
           <span role="img" aria-label="Pufferfish">
@@ -21,7 +21,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            setCode(code + '🐠');
           }}
         >
           <span role="img" aria-label="Whale">
@@ -31,19 +31,19 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            setCode(code + '🐋');
           }}
         >
           <span role="img" aria-label="Clownfish">
             🐠
           </span>
-        </button>{" "}
+        </button>{' '}
       </div>
 
       <button
         type="button"
         onClick={() => {
-          console.log("Reset Code!");
+          console.log('Reset Code!');
         }}
       >
         Reset
