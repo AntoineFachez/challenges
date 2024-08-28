@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 
 export default function App() {
+  const [reset, setReset] = useState(false);
   const [code, setCode] = useState('');
 
   const validCode = '🐡🐠🐋';
@@ -44,10 +45,11 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
-          setCode('Reset Code!');
+          setReset(!reset);
+          setCode('');
         }}
       >
-        Reset
+        {reset ? 'Reset' : 'Reset'}
       </button>
       <h2>{code}</h2>
 
