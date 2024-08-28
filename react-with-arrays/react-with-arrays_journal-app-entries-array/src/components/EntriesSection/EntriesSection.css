@@ -1,0 +1,15 @@
+.entries-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  overflow: scroll;
+}
+
+.entries-section__entries {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow: scroll;
+}

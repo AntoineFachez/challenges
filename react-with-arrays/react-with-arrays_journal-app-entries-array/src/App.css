@@ -1,0 +1,19 @@
+.app {
+  display: grid;
+  height: 100vh;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  max-width: 368px;
+  margin: 0 auto;
+  gap: 32px;
+  overflow: hidden;
+}
+
+.app__main {
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  overflow: hidden;
+}
