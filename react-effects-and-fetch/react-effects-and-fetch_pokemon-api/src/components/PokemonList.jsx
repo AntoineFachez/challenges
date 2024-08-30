@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./PokemonList.css";
-
 
 export default function PokemonList() {
   const [pokemon, setPokemon] = useState([]);
@@ -14,17 +13,30 @@ export default function PokemonList() {
       console.log(error);
     }
   }
+  useEffect(() => {
+    loadPokemon();
+    console.log(pokemon);
+
+    return () => {};
+  }, []);
 
   return (
-    <main>
-      <button type="button" className="button" onClick={loadPokemon}>
-        Load Pokémon
-      </button>
-      <ul>
-        {pokemon.map(({ name }) => (
-          <li key={name} className="pokemon">{name}</li>
-        ))}
-      </ul>
+    <main
+      style={{
+        width: "100%",
+        height: "fit-content",
+        display: "flex",
+        flexFlow: "row wrap",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "pi8nk",
+      }}
+    >
+      {pokemon.map(({ name }) => (
+        <div style={{ height: "fit-content" }} key={name} className="pokemon">
+          {name}
+        </div>
+      ))}
     </main>
   );
 }
