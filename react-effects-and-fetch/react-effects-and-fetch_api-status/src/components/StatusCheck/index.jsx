@@ -5,37 +5,29 @@ const apiStatusUrl = "https://example-apis.vercel.app/api/status";
 
 export default function StatusCheck() {
   const [isStatusOk, setIsStatusOk] = useState("❌");
-  // Something needs to change here…
-  // ↙️
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const handleCheckApiStatus = async () => {
-    /**
-     * Hint 1:
-     * Use the `fetch()` function and pass the `apiStatusUrl` into it
-     *
-     * Hint 2:
-     * The fetch function returns a promise which resolves to a Response
-     * object once it is ready.
-     *
-     * Hint 3:
-     * The Response object has a `ok` property which is true if the response
-     * is okay and false if it is not.
-     **/
-    // --v-- write your code here --v--
+    try {
+      const response = await fetch(apiStatusUrl);
 
-    const response = await fetch(apiStatusUrl);
-    console.log(response, response.ok);
-
-    if (response.ok) {
-      setIsStatusOk("✅");
-    } else {
+      if (response.ok) {
+        setIsStatusOk("✅");
+        setErrorMessage(null);
+      } else {
+        setIsStatusOk("❌");
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || "An error occurred.");
+      }
+    } catch (error) {
+      console.error("Error checking API status:", error);
       setIsStatusOk("❌");
+      setErrorMessage("Network error or API unavailable.");
     }
-    // --^-- write your code here --^--
   };
+
   useEffect(() => {
     handleCheckApiStatus();
-
-    return () => {};
   }, []);
 
   return (
@@ -43,6 +35,7 @@ export default function StatusCheck() {
       <div className="status-check__wrapper">
         <h2 className="status-check__heading">Status:</h2>
         <span className="status-check__icon">{isStatusOk}</span>
+        {errorMessage && <p className="status-check__error">{errorMessage}</p>}
       </div>
       <button
         type="button"
