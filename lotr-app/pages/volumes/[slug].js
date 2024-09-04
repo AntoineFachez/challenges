@@ -1,12 +1,15 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
-import { mockDataVolumes } from "../../mocks/mockDataVolumes"; // Import your mock data
+import { volumes } from "@/resources/lib/data"; // Import your mock data
+import { useContext } from "react";
+import { AppContext } from "@/context/AppContext";
 
-export default function VolumeDetailPage({ volumeData }) {
-  console.log(mockDataVolumes);
+export default function VolumeDetailPage({ volumesData, volumeData }) {
+  const { first } = useContext(AppContext);
+  console.log(first);
+
   const router = useRouter();
   const { slug } = router.query;
-  // console.log(slug, mockDataVolumes, volumeData);
-  //
   return (
     <div>
       <h1>{volumeData?.title}</h1>
@@ -16,22 +19,33 @@ export default function VolumeDetailPage({ volumeData }) {
           <li key={book.ordinal}>{book.title}</li>
         ))}
       </ul>
+
+      <Image
+        src={volumeData?.cover}
+        alt={volumeData?.title}
+        width={500}
+        height={500}
+      />
+
+      <button onClick={() => router.push(`/volumes/the-return-of-the-king`)}>
+        the-return-of-the-king
+      </button>
     </div>
   );
 }
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const volumeData = mockDataVolumes.find(
+  const volumeData = volumes.find(
     (volume) =>
       volume.title.toLowerCase().replace(/ /g, "-") === slug.toLowerCase()
   );
 
   return {
-    props: { volumeData },
+    props: { volumes, volumeData },
   };
 }
 export async function getStaticPaths() {
-  const paths = mockDataVolumes.map((volume) => ({
+  const paths = volumes.map((volume) => ({
     params: { slug: volume.title.toLowerCase().replace(/ /g, "-") },
   }));
 

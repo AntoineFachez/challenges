@@ -2,8 +2,13 @@ export const volumes = [
   {
     slug: "the-fellowship-of-the-ring",
     title: "The Fellowship of the Ring",
+    numberOfChapters: 22,
     description:
-      "The Fellowship of the Ring is the first volume of J. R. R. Tolkien's epic adventure The Lord of the Rings. It is followed by The Two Towers and The Return of the King.",
+      "In a sleepy village in the Shire, a hobbit named Frodo inherits a magical ring. He embarks on a perilous journey to destroy it in the fires of Mount Doom, facing dark forces and forging unlikely friendships along the way.",
+    protagonists: ["Frodo Baggins", "Samwise Gamgee", "Gandalf the Grey"],
+    antagonists: ["Sauron", "Nazgûl"],
+    majorEvents: ["Council of Elrond", "Fellowship's journey through Moria"],
+    majorLocations: ["The Shire", "Rivendell"],
     cover: "/images/the-fellowship-of-the-ring.png",
     books: [
       {
@@ -20,8 +25,13 @@ export const volumes = [
   {
     slug: "the-two-towers",
     title: "The Two Towers",
+    numberOfChapters: 19,
     description:
-      "The Two Towers is the second volume of J. R. R. Tolkien's epic adventure The Lord of the Rings. It is preceded by The Fellowship of the Ring and followed by The Return of the King.",
+      "The Fellowship is broken, and Frodo and Sam continue their journey alone to Mordor. Meanwhile, Aragorn, Legolas, and Gimli pursue Merry and Pippin, who have been captured by orcs, and become entangled in the war against Saruman.",
+    protagonists: ["Frodo Baggins", "Samwise Gamgee", "Aragorn"],
+    antagonists: ["Sauron", "Saruman"],
+    majorEvents: ["Battle of Helm's Deep", "Ents' attack on Isengard"],
+    majorLocations: ["Rohan", "Fangorn Forest"],
     cover: "/images/the-two-towers.png",
     books: [
       {
@@ -38,8 +48,16 @@ export const volumes = [
   {
     slug: "the-return-of-the-king",
     title: "The Return of the King",
+    numberOfChapters: 22,
     description:
-      "The Return of the King is the third and final volume of J. R. R. Tolkien's epic adventure The Lord of the Rings. It is preceded by The Fellowship of the Ring and The Two Towers.",
+      "Aragorn claims his rightful throne as King of Gondor, while Frodo and Sam continue their arduous journey to Mount Doom to destroy the One Ring. The fate of Middle-earth hangs in the balance as the final battle against Sauron unfolds.",
+    protagonists: ["Frodo Baggins", "Samwise Gamgee", "Aragorn"],
+    antagonists: ["Sauron", "The Witch-king of Angmar"],
+    majorEvents: [
+      "Battle of the Pelennor Fields",
+      "Destruction of the One Ring",
+    ],
+    majorLocations: ["Gondor", "Mordor"],
     cover: "/images/the-return-of-the-king.png",
     books: [
       {
