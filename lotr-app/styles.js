@@ -12,3 +12,14 @@ export default createGlobalStyle`
     font-family: system-ui;
   }
 `;
+export const lightTheme = {
+  body: "#fff",
+  text: "#333",
+  // ... other styles
+};
+
+export const darkTheme = {
+  body: "#333",
+  text: "#fff",
+  // ... other styles
+};

@@ -1,15 +1,13 @@
+import { useContext } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { volumes } from "@/resources/lib/data"; // Import your mock data
-import { useContext } from "react";
-import { AppContext } from "@/context/AppContext";
+// import { AppContext } from "@/context/AppContext";
 
 export default function VolumeDetailPage({ volumesData, volumeData }) {
-  const { first } = useContext(AppContext);
-  console.log(first);
-
   const router = useRouter();
   const { slug } = router.query;
+
   return (
     <div>
       <h1>{volumeData?.title}</h1>
@@ -26,10 +24,6 @@ export default function VolumeDetailPage({ volumesData, volumeData }) {
         width={500}
         height={500}
       />
-
-      <button onClick={() => router.push(`/volumes/the-return-of-the-king`)}>
-        the-return-of-the-king
-      </button>
     </div>
   );
 }
