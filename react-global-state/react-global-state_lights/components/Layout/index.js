@@ -26,7 +26,8 @@ const Content = styled.div`
   padding: 32px 0;
 `;
 
-export default function Layout({ children, isDimmed }) {
+export default function Layout({ children, handleToggle, lights, isDimmed }) {
+  console.log("isDimmed", isDimmed);
   return (
     <StyledLayout>
       <Background $isDimmed={isDimmed}>
