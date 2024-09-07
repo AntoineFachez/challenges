@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { volumes } from "../../lib/data";
+<<<<<<< HEAD
 import styled from "styled-components";
 
 const StyledComponent = styled.div`
@@ -36,6 +37,8 @@ const TextComponent = styled.p`
   background-color: ${({ $color }) => $color};
   color: #ddd;
 `;
+=======
+>>>>>>> 2fc40a602a7ca12dd1b4e2b39b627f88e8a925b5
 
 export default function VolumeDetail() {
   const router = useRouter();
@@ -51,6 +54,7 @@ export default function VolumeDetail() {
     return null;
   }
 
+<<<<<<< HEAD
   const { title, description, cover, books, color } = volume;
 
   return (
@@ -93,5 +97,42 @@ export default function VolumeDetail() {
         ) : null}
       </NavWrapper>
     </StyledComponent>
+=======
+  const { title, description, cover, books } = volume;
+
+  return (
+    <>
+      <Link href="/volumes">← All Volumes</Link>
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <ul>
+        {books.map(({ ordinal, title }) => (
+          <li key={title}>
+            {ordinal}: <strong>{title}</strong>
+          </li>
+        ))}
+      </ul>
+      <Image
+        src={cover}
+        alt={`Cover image of ${title}`}
+        width={140}
+        height={230}
+      />
+      {previousVolume ? (
+        <div>
+          <Link href={`/volumes/${previousVolume.slug}`}>
+            ← Previous Volume: {previousVolume.title}
+          </Link>
+        </div>
+      ) : null}
+      {nextVolume ? (
+        <div>
+          <Link href={`/volumes/${nextVolume.slug}`}>
+            Next Volume: {nextVolume.title} →
+          </Link>
+        </div>
+      ) : null}
+    </>
+>>>>>>> 2fc40a602a7ca12dd1b4e2b39b627f88e8a925b5
   );
 }
