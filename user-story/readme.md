@@ -3,7 +3,7 @@
 **Value Proposition**
 
 - **As a:** Student
-- **I want to:** Read Posts from other Students
+- **I want to:** Read Post s from other Students
 - **To be able to:** Decide which one I want to Favorite
 
 **Description**
