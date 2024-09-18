@@ -1,5 +1,3 @@
-// /pages/products/[id].js
-
 import { useRouter } from "next/router";
 import useSWR from "swr";
 
